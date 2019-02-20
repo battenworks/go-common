@@ -1,1 +1,1 @@
-module github.com/ps-dev/go-shared
+module github.com/battenworks/go-shared
