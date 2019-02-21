@@ -18,11 +18,11 @@ func TestParseFlags(t *testing.T) {
 	})
 
 	t.Run("contains user-supplied value when no default provided", func(t *testing.T) {
-		args := []string{"-key3=value3"}
+		args := []string{"-key3=value.3"}
 		defaults := map[string]string{"key1": "value1", "key2": "value2"}
 
 		actual := ParseFlags(args, defaults)
-		expected := "value3"
+		expected := "value.3"
 
 		if actual["key3"] != expected {
 			t.Errorf("expected: '%s', actual: '%s'", expected, actual)
