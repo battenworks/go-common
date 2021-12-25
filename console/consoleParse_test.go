@@ -13,19 +13,19 @@ func TestParseFlags(t *testing.T) {
 		expected := "value1"
 
 		if actual["key1"] != expected {
-			t.Errorf("expected: '%s', actual: '%s'", expected, actual)
+			t.Errorf("expected: '%s', actual: '%s'", expected, actual["key1"])
 		}
 	})
 
 	t.Run("contains user-supplied value when no default provided", func(t *testing.T) {
-		args := []string{"-key3=value.3"}
+		args := []string{"-key3=value3"}
 		defaults := map[string]string{"key1": "value1", "key2": "value2"}
 
 		actual := ParseFlags(args, defaults)
-		expected := "value.3"
+		expected := "value3"
 
 		if actual["key3"] != expected {
-			t.Errorf("expected: '%s', actual: '%s'", expected, actual)
+			t.Errorf("expected: '%s', actual: '%s'", expected, actual["key3"])
 		}
 	})
 
@@ -37,7 +37,19 @@ func TestParseFlags(t *testing.T) {
 		expected := "value3"
 
 		if actual["key1"] != expected {
-			t.Errorf("expected: '%s', actual: '%s'", expected, actual)
+			t.Errorf("expected: '%s', actual: '%s'", expected, actual["key1"])
+		}
+	})
+
+	t.Run("parses values with special characters", func(t *testing.T) {
+		args := []string{"-key=value.with.special-characters"}
+		defaults := map[string]string{"key1": "value1"}
+
+		actual := ParseFlags(args, defaults)
+		expected := "value.with.special-characters"
+
+		if actual["key"] != expected {
+			t.Errorf("expected: '%s', actual: '%s'", expected, actual["key"])
 		}
 	})
 }

@@ -9,7 +9,8 @@ func ParseFlags(args []string, defaults map[string]string) map[string]string {
 
 	for _, arg := range args {
 		matches := regexFlag.FindStringSubmatch(arg)
-		if matches != nil {
+
+		if len(matches) >= 2 {
 			defaults[matches[1]] = matches[2]
 		}
 	}

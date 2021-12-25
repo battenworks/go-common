@@ -14,37 +14,37 @@ const colorWhite = "\x1b[37;1m"
 const colorYellow = "\x1b[33;1m"
 const colorNone = "\x1b[0m"
 
-// Blue prints text in blue
+// Blue prints formatted text in blue
 func Blue(text string) {
 	fmt.Printf(format, colorBlue, text, colorNone)
 }
 
-// Cyan prints text in cyan
+// Cyan prints formatted text in cyan
 func Cyan(text string) {
 	fmt.Printf(format, colorCyan, text, colorNone)
 }
 
-// Green prints text in green
+// Green prints formatted text in green
 func Green(text string) {
 	fmt.Printf(format, colorGreen, text, colorNone)
 }
 
-// Magenta prints text in magenta
+// Magenta prints formatted text in magenta
 func Magenta(text string) {
 	fmt.Printf(format, colorMagenta, text, colorNone)
 }
 
-// Red prints text in red
+// Red prints formatted text in red
 func Red(text string) {
 	fmt.Printf(format, colorRed, text, colorNone)
 }
 
-// White prints text in white
+// White prints formatted text in white
 func White(text string) {
 	fmt.Printf(format, colorWhite, text, colorNone)
 }
 
-// Yellow prints text in yellow
+// Yellow prints formatted text in yellow
 func Yellow(text string) {
 	fmt.Printf(format, colorYellow, text, colorNone)
 }
