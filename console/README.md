@@ -1,2 +1,2 @@
 # console
-A Go package for reading data from, and writing data to, the console.
+A Go package for writing strings to the console.
