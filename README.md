@@ -1,2 +1,2 @@
-# go-shared
+# go-common
 Some common Go code.
