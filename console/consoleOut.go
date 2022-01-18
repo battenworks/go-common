@@ -34,6 +34,11 @@ func Magenta(text string) {
 	fmt.Printf(format, colorMagenta, text, colorNone)
 }
 
+// Out prints formatted text with no color modification
+func Out(text string) {
+	fmt.Printf(format, colorNone, text, colorNone)
+}
+
 // Red prints formatted text in red
 func Red(text string) {
 	fmt.Printf(format, colorRed, text, colorNone)
