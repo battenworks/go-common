@@ -1,3 +1,3 @@
-module github.com/battenworks/go-shared
+module battenworks.com/go-shared
 
 go 1.17
