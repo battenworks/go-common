@@ -1,7 +1,7 @@
 package command
 
 import (
-	"../console"
+	"github.com/battenworks/go-common/console"
 	"os/exec"
 	"strings"
 )
