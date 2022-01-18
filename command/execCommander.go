@@ -9,7 +9,7 @@ import (
 type CommandExecutor struct{}
 
 // Execute executes the given command with the given arguments
-func (ce CommandExecutor) Execute(cmdName string, cmdArgs []string) ([]byte, error) {
+func (ce CommandExecutor) Execute(cmdName string, cmdArgs ...string) ([]byte, error) {
 	cmd := exec.Command(cmdName, cmdArgs...)
 	out, err := cmd.CombinedOutput()
 
