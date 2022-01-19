@@ -1,9 +1,10 @@
 package command
 
 import (
-	"github.com/battenworks/go-common/console"
 	"os/exec"
 	"strings"
+
+	"github.com/battenworks/go-common/console"
 )
 
 type CommandExecutor struct{}
@@ -13,12 +14,15 @@ func (ce CommandExecutor) Execute(cmdName string, cmdArgs ...string) ([]byte, er
 	cmd := exec.Command(cmdName, cmdArgs...)
 	out, err := cmd.CombinedOutput()
 
-	console.Yellowln(strings.Join(cmd.Args, " "))
+	console.Out("command: ")
+	console.Yellow(strings.Join(cmd.Args, " ") + " ")
 
 	if err != nil {
-		console.Redln(" error")
+		console.Redln("error")
 		return out, err
 	}
+
+	console.Greenln("success")
 
 	return out, nil
 }

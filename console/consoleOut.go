@@ -4,22 +4,24 @@ import (
 	"fmt"
 )
 
-const format = "%s%s%s"
-const colorBlue = "\x1b[34m"
-const colorBlueBold = "\x1b[34;1m"
-const colorCyan = "\x1b[36m"
-const colorCyanBold = "\x1b[36;1m"
-const colorGreen = "\x1b[32m"
-const colorGreenBold = "\x1b[32;1m"
-const colorMagenta = "\x1b[35m"
-const colorMagentaBold = "\x1b[35;1m"
-const colorRed = "\x1b[31m"
-const colorRedBold = "\x1b[31;1m"
-const colorWhite = "\x1b[37m"
-const colorWhiteBold = "\x1b[37;1m"
-const colorYellow = "\x1b[33m"
-const colorYellowBold = "\x1b[33;1m"
-const colorNone = "\x1b[0m"
+const (
+	format           = "%s%s%s"
+	colorBlue        = "\x1b[34m"
+	colorBlueBold    = "\x1b[34;1m"
+	colorCyan        = "\x1b[36m"
+	colorCyanBold    = "\x1b[36;1m"
+	colorGreen       = "\x1b[32m"
+	colorGreenBold   = "\x1b[32;1m"
+	colorMagenta     = "\x1b[35m"
+	colorMagentaBold = "\x1b[35;1m"
+	colorRed         = "\x1b[31m"
+	colorRedBold     = "\x1b[31;1m"
+	colorWhite       = "\x1b[37m"
+	colorWhiteBold   = "\x1b[37;1m"
+	colorYellow      = "\x1b[33m"
+	colorYellowBold  = "\x1b[33;1m"
+	colorNone        = "\x1b[0m"
+)
 
 // Blue prints text in blue
 func Blue(text string) {
@@ -28,7 +30,7 @@ func Blue(text string) {
 
 // Blueln prints text in blue followed by a newline character
 func Blueln(text string) {
-	fmt.Printf(format, colorBlue, text, colorNone + "\n")
+	fmt.Printf(format, colorBlue, text, colorNone+"\n")
 }
 
 // BlueBold prints bold text in blue
@@ -38,7 +40,7 @@ func BlueBold(text string) {
 
 // BluelnBold prints bold text in blue followed by a newline character
 func BluelnBold(text string) {
-	fmt.Printf(format, colorBlueBold, text, colorNone + "\n")
+	fmt.Printf(format, colorBlueBold, text, colorNone+"\n")
 }
 
 // Cyan prints text in cyan
@@ -48,7 +50,7 @@ func Cyan(text string) {
 
 // Cyanln prints text in cyan followed by a newline character
 func Cyanln(text string) {
-	fmt.Printf(format, colorCyan, text, colorNone + "\n")
+	fmt.Printf(format, colorCyan, text, colorNone+"\n")
 }
 
 // CyanBold prints bold text in cyan
@@ -58,7 +60,7 @@ func CyanBold(text string) {
 
 // CyanlnBold prints bold text in cyan followed by a newline character
 func CyanlnBold(text string) {
-	fmt.Printf(format, colorCyanBold, text, colorNone + "\n")
+	fmt.Printf(format, colorCyanBold, text, colorNone+"\n")
 }
 
 // Green prints text in green
@@ -68,7 +70,7 @@ func Green(text string) {
 
 // Greenln prints text in green followed by a newline character
 func Greenln(text string) {
-	fmt.Printf(format, colorGreen, text, colorNone + "\n")
+	fmt.Printf(format, colorGreen, text, colorNone+"\n")
 }
 
 // GreenBold prints bold text in green
@@ -78,7 +80,7 @@ func GreenBold(text string) {
 
 // GreenlnBold prints bold text in green followed by a newline character
 func GreenlnBold(text string) {
-	fmt.Printf(format, colorGreenBold, text, colorNone + "\n")
+	fmt.Printf(format, colorGreenBold, text, colorNone+"\n")
 }
 
 // Magenta prints text in magenta
@@ -88,7 +90,7 @@ func Magenta(text string) {
 
 // Magentaln prints text in magenta followed by a newline character
 func Magentaln(text string) {
-	fmt.Printf(format, colorMagenta, text, colorNone + "\n")
+	fmt.Printf(format, colorMagenta, text, colorNone+"\n")
 }
 
 // MagentaBold prints bold text in magenta
@@ -98,7 +100,7 @@ func MagentaBold(text string) {
 
 // MagentalnBold prints bold text in magenta followed by a newline character
 func MagentalnBold(text string) {
-	fmt.Printf(format, colorMagentaBold, text, colorNone + "\n")
+	fmt.Printf(format, colorMagentaBold, text, colorNone+"\n")
 }
 
 // Out prints text with no color modification
@@ -107,8 +109,8 @@ func Out(text string) {
 }
 
 // Outln prints text with no color modification followed by a newline character
-func Outln(text string) {
-	fmt.Printf(format, colorNone, text, colorNone + "\n")
+func Outln(text ...string) {
+	fmt.Printf(format, colorNone, text, colorNone+"\n")
 }
 
 // Red prints text in red
@@ -118,7 +120,7 @@ func Red(text string) {
 
 // Redln prints text in red followed by a newline character
 func Redln(text string) {
-	fmt.Printf(format, colorRed, text, colorNone + "\n")
+	fmt.Printf(format, colorRed, text, colorNone+"\n")
 }
 
 // RedBold prints bold text in red
@@ -128,7 +130,7 @@ func RedBold(text string) {
 
 // RedlnBold prints bold text in red followed by a newline character
 func RedlnBold(text string) {
-	fmt.Printf(format, colorRedBold, text, colorNone + "\n")
+	fmt.Printf(format, colorRedBold, text, colorNone+"\n")
 }
 
 // White prints text in white
@@ -138,7 +140,7 @@ func White(text string) {
 
 // Whiteln prints text in white followed by a newline character
 func Whiteln(text string) {
-	fmt.Printf(format, colorWhite, text, colorNone + "\n")
+	fmt.Printf(format, colorWhite, text, colorNone+"\n")
 }
 
 // WhiteBold prints bold text in white
@@ -148,7 +150,7 @@ func WhiteBold(text string) {
 
 // WhitelnBold prints bold text in white followed by a newline character
 func WhitelnBold(text string) {
-	fmt.Printf(format, colorWhiteBold, text, colorNone + "\n")
+	fmt.Printf(format, colorWhiteBold, text, colorNone+"\n")
 }
 
 // Yellow prints text in yellow
@@ -158,7 +160,7 @@ func Yellow(text string) {
 
 // Yellowln prints text in yellow followed by a newline character
 func Yellowln(text string) {
-	fmt.Printf(format, colorYellow, text, colorNone + "\n")
+	fmt.Printf(format, colorYellow, text, colorNone+"\n")
 }
 
 // YellowBold prints bold text in yellow
@@ -168,5 +170,5 @@ func YellowBold(text string) {
 
 // YellowlnBold prints bold text in yellow followed by a newline character
 func YellowlnBold(text string) {
-	fmt.Printf(format, colorYellowBold, text, colorNone + "\n")
+	fmt.Printf(format, colorYellowBold, text, colorNone+"\n")
 }
