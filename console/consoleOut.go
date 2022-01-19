@@ -109,7 +109,7 @@ func Out(text string) {
 }
 
 // Outln prints text with no color modification followed by a newline character
-func Outln(text ...string) {
+func Outln(text string) {
 	fmt.Printf(format, colorNone, text, colorNone+"\n")
 }
 
