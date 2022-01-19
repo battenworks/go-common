@@ -13,14 +13,12 @@ func (ce CommandExecutor) Execute(cmdName string, cmdArgs ...string) ([]byte, er
 	cmd := exec.Command(cmdName, cmdArgs...)
 	out, err := cmd.CombinedOutput()
 
-	console.Yellow(strings.Join(cmd.Args, " "))
+	console.Yellowln(strings.Join(cmd.Args, " "))
 
 	if err != nil {
-		console.Red(" error\n")
+		console.Redln(" error")
 		return out, err
 	}
-
-	console.Green(" done\n")
 
 	return out, nil
 }
