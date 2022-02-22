@@ -1,2 +1,2 @@
 # command
-A Go package that wraps `cmd.Exec()`
+A Go package that wraps `cmd.Exec()`.

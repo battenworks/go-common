@@ -1,2 +1,2 @@
 # assert
-A Go package of test assertions
+A Go package of test assertions.
