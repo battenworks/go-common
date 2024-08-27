@@ -1,9 +1,3 @@
-module github.com/battenworks/go-common/v2
+module github.com/battenworks/go-common/v3
 
 go 1.22
-
-retract (
-	v2.1.0
-	v2.0.1
-	v2.0.0
-)
